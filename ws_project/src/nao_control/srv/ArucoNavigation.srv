@@ -1,0 +1,6 @@
+#CREATE request parameters
+geometry_msgs/Twist new_pos
+int8 stage
+--------------------------------
+#CREATE response parameters
+int8 new_stage

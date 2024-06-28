@@ -1,0 +1,7 @@
+#CREATE request parameters
+int8 time
+--------------------------------
+#CREATE response parameters
+bool reply
+float64 blob_size
+float64 angle

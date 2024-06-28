@@ -1,0 +1,29 @@
+<launch>
+  <!--
+  	This pushes the local PYTHONPATH into the launch file, so that the NaoQI API is found.
+    You need to add the Nao's API dir to your PYTHONPATH so that the modules are found.
+  -->
+  <env name="PYTHONPATH" value="$(env PYTHONPATH)" />
+
+  <arg name="nao_ip" default="$(optenv NAO_IP 127.0.0.1)" />
+  <arg name="nao_port" default="$(optenv NAO_PORT 9559)" />
+
+  
+  <node pkg="nao_control" type="bottle_detector_service"  name="bottle_detector_service"  required="true" output="screen"/>
+  <node pkg="nao_control" type="look_around_service"      name="look_around_service"      required="true" output="screen"/>
+  <node pkg="nao_control" type="nao_turn_body_service"    name="nao_turn_body_service"    required="true" output="screen"/>
+  <node pkg="nao_control" type="aruco_detector_service"   name="aruco_detector_service"   required="true" output="screen"/>
+  <node pkg="nao_control" type="get_head_angle.py"        name="get_head_angle"           required="true" args="$(arg nao_ip) $(arg nao_port)" output="screen"/>
+  <node pkg="nao_control" type="stand_pose.py"            name="stand_pose"               required="true" args="$(arg nao_ip) $(arg nao_port)" output="screen"/>
+  <node pkg="nao_control" type="move_arms_grasp.py"       name="move_arms_grasp"          required="true" args="$(arg nao_ip) $(arg nao_port)" output="screen"/>
+  <node pkg="nao_control" type="move_arms_down.py"        name="move_arms_down"           required="true" args="$(arg nao_ip) $(arg nao_port)" output="screen"/>
+  <node pkg="nao_control" type="move_arms_rotate.py"      name="move_arms_rotate"         required="true" args="$(arg nao_ip) $(arg nao_port)" output="screen"/>
+  <node pkg="nao_control" type="move_arms_open.py"        name="move_arms_open"           required="true" args="$(arg nao_ip) $(arg nao_port)" output="screen"/>
+  <node pkg="nao_control" type="nao_walk.py"              name="nao_walk"                 required="true" args="$(arg nao_ip) $(arg nao_port)" output="screen"/>
+  <!-- <node pkg="nao_control" type="nao_walk_backwards.py"    name="nao_walk_backwards"       required="true" args="$(arg nao_ip) $(arg nao_port)" output="screen"/> -->
+  <node pkg="nao_control" type="nao_walk_with_arms.py"    name="nao_walk_with_arms"       required="true" args="$(arg nao_ip) $(arg nao_port)" output="screen"/>
+  <!-- <node pkg="nao_control" type="detection_srv.py"         name="detection_srv"            required="true" args="$(arg nao_ip) $(arg nao_port)" output="screen"/> -->
+  <!-- <node pkg="nao_control" type="walk_to_aruco.py"         name="walk_to_aruco"            required="true" args="$(arg nao_ip) $(arg nao_port)" output="screen"/> -->
+  <!-- <node pkg="nao_control" type="project"                  name="project"                  required="true" output="screen"/> -->
+
+</launch>

@@ -1,0 +1,6 @@
+#CREATE request parameters
+string  name
+float64 theta
+--------------------------------
+#CREATE response parameters
+bool reply

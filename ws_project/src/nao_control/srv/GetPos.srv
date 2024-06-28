@@ -1,0 +1,5 @@
+#CREATE request parameters
+string joint_name
+--------------------------------
+#CREATE response parameters
+geometry_msgs/Twist cur_pos

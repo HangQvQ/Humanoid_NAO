@@ -1,0 +1,8 @@
+#CREATE request parameters
+int8 time
+int8 id
+--------------------------------
+#CREATE response parameters
+bool reply
+float64 angle
+float64 aruco_area

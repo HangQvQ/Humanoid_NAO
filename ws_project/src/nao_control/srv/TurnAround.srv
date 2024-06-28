@@ -1,0 +1,5 @@
+#CREATE request parameters
+float64 mode
+--------------------------------
+#CREATE response parameters
+bool reply
