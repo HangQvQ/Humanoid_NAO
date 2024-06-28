@@ -5,7 +5,8 @@ Demo: [link](https://youtu.be/Z2xT2zG202E)
 
 # Dependencies
 OpenCV and Aruco
-install openCV:
+
+Install openCV:
 ```
 sudo apt-get install python3-opencv
 ``````
