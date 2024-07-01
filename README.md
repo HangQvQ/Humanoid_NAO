@@ -1,4 +1,4 @@
-# NAO_Collect_Bottles
+# Humanoid_NAO
 
 Let the NAO robot collect bottles with recyclable symbol.
 Demo: [link](https://youtu.be/Z2xT2zG202E)
